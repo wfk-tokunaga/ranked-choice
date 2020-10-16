@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta lang="eng" charset="UFT-8" dir="ltr">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ranked Choice Visualized</title>
+        <link rel="stylesheet" href="main.css">
+    </head>
+
+    <body>
+        <h1>Ranked Choice Voting, Visualized</h1>
+        
+        <div id="inputSection"> 
+            <div class="row">
+                <h3>Input</h3>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <p>1. How many candidates running?</p>
+                </div>
+                <div class="col-4">
+                    <p>2. How many spots to fill?</p>
+                </div>
+                <div class="col-4"> 
+                    <p>3. How many ballots to count?</p>
+                </div> 
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    (1.) <input id="numCandidates" type="number">
+                </div>
+                <div class="col-4">
+                    (2.) <input id="numSpots" type="number">
+                </div>
+                <div class="col-4">
+                    (3.) <input id="numBallots" type="number">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <button onclick="simulateElection()">Simulate Election!</button>
+                    <p id="textToChange"></p>
+                    <button onclick="runNextRound()">Run Next Round!</button>
+                </div>
+            </div>   
+        </div>
+
+        <div class="row">
+            <div id="totalsSection" class="col-6" style="display: none">
+                <h3>Totals Section</h3>
+                <p></p>
+            </div>
+
+            <div id="graphSection" class="col-6" style="display: none">
+                <h3>Graph Section</h3>
+                <canvas id="graph" width="600" height="400" style="border: 1px solid black;">Graph!</canvas>
+            </div>
+        
+
+            <div id="ballotsSection" class="col-6" style="display: none">
+                <h3>Ballots Section</h3> 
+                <button type="button" id="previousRoundButton" onclick="previousRoundVisuals();">Previous Round</button>
+                <button type="button" id="nextRoundButton" onclick="nextRoundVisuals();">Next Round</button>
+                
+            </div>
+        </div>
+        
+        <script src="app.js"></script>
+
+    </body>
+</html>
