@@ -17,8 +17,7 @@ let textToChange;
 //         const textToChange = document.getElementById("textToChange");
 //         document.querySelector('#simulatebutton').addEventListener('click', () => {
 //         })
-// }
-
+// 
 // function handler() {}
 // document.onload = handler;
 // document.onload = () => {
